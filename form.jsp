@@ -8,21 +8,23 @@
     <title>Greeting</title>
 </head>
 <body>
-<form:form action="/addFilm" modelAttribute="film">
+<form:form action="/addCinema" modelAttribute="cinema">
+    ID:
+    <form:input path="id"/>
+    <form:errors path="id"/><br/>
+
+
+
     Name:
     <form:input path="name"/>
+    <form:errors path="name"/><br/>
 
 
-    Director:
-    <form:input path="director"/>
+    Location:
+    <form:input path="location"/>
+    <form:errors path="location"/><br/>
 
-
-    Genre:
-    <form:input path="genre"/>
-
-    Runtime:
-    <form:input path="runtime"/>
-
+    <input type="hidden" name = "cinema" value =${cinema}>
     <input type="submit"/>
 </form:form>
 </body>
